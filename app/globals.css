@@ -218,3 +218,24 @@ a:hover{ text-decoration: underline; }
   .headerCta{ display:none; }  /* 右上CTAは隠してMenu優先（ドロワー内にCTAあり） */
   .menuBtn{ display:inline-block; }
 }
+
+/* Footer */
+.siteFooter{
+  border-top: 1px solid var(--line);
+  background: color-mix(in srgb, var(--panel) 92%, transparent);
+}
+.footerInner{
+  display:flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-top: 18px;
+  padding-bottom: 22px;
+}
+.footerLinks a{
+  color: var(--muted);
+}
+.footerLinks a:hover{
+  color: var(--text);
+  text-decoration: none;
+}

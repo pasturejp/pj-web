@@ -44,9 +44,6 @@ export default function CompanyPage() {
         </p>
       </section>
 
-      <footer className="footer">
-        <Link href="/">← Back to Home</Link>
-      </footer>
     </main>
   );
 }

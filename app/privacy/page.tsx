@@ -50,17 +50,7 @@ export default function PrivacyPage() {
           </div>
         </div>
       </section>
-
-      {/* FOOTER */}
-      <footer className="container" style={{ paddingTop: 18, paddingBottom: 26 }}>
-        <div style={{ display: "flex", justifyContent: "space-between", gap: 12, flexWrap: "wrap" }}>
-          <span className="muted">© {new Date().getFullYear()} Pasture Japan</span>
-          <span className="muted">
-            <Link href="/company">Company</Link> · <Link href="/contact">Contact</Link> ·{" "}
-            <Link href="/privacy">Privacy</Link>
-          </span>
-        </div>
-      </footer>
+      
     </>
   );
 }
