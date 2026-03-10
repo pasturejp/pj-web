@@ -99,3 +99,51 @@
   .headerNav{ display:none; } /* スマホは隠してCTA優先（必要なら後でメニュー化） */
   .grid3{ grid-template-columns: 1fr; }
 }
+
+.brandFull { display: inline-flex; }
+.headerActions{ display:flex; align-items:center; gap:10px; }
+.menuBtn{
+  display:none;
+  padding:10px 12px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background: var(--panel);
+  color: var(--text);
+}
+.menuBtn:hover{ filter: brightness(0.99); }
+
+.drawerRoot{ position: fixed; inset: 0; z-index: 100; }
+.drawerBackdrop{ position:absolute; inset:0; background: rgba(0,0,0,0.35); }
+.drawerPanel{
+  position:absolute; top:0; right:0; bottom:0;
+  width: min(92vw, 360px);
+  background: var(--panel);
+  border-left: 1px solid var(--line);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.25);
+  padding: 16px;
+  display:flex; flex-direction: column; gap: 14px;
+}
+.drawerTop{ display:flex; justify-content: space-between; align-items:center; gap: 10px; }
+.drawerClose{
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 8px 10px;
+  background: #fafbf9;
+}
+.drawerLinks{ display:flex; flex-direction: column; gap: 8px; padding-top: 6px; }
+.drawerLink{
+  padding: 12px 12px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fafbf9;
+  color: var(--text);
+}
+.drawerLink:hover{ text-decoration:none; background:#f1f6f1; }
+.drawerBottom{ margin-top: auto; }
+
+@media (max-width: 900px){
+  .headerNav{ display:none; }
+  .brandFull{ display:none; }   /* スマホでは横長ロゴを隠す */
+  .headerCta{ display:none; }   /* 右上CTAは隠してMenu優先（ドロワー内にCTAあり） */
+  .menuBtn{ display:inline-block; }
+}
