@@ -1,132 +1,101 @@
-@import "tailwindcss";
-
-/* =========
-   Brand / Theme
-   ========= */
-:root {
-  /* base */
-  --bg: #f7faf7;
-  --panel: #ffffff;
-  --text: #0f1a12;
-  --muted: #5f6f63;
-  --line: #dfe8e1;
-
-  /* Pasture Japan green */
-  --accent: #2f7d3b;
-  --accent2: #1e5b2a;
-
-  --shadow: 0 10px 30px rgba(16, 24, 16, 0.08);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0c120e;
-    --panel: #0f1712;
-    --text: #e9f2eb;
-    --muted: #a9b7ad;
-    --line: #203126;
-
-    --accent: #4bb05b;
-    --accent2: #b7f0c0;
-
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-  }
-}
-
-/* Tailwind v4 theme tokens (optional) */
-@theme inline {
-  --color-background: var(--bg);
-  --color-foreground: var(--text);
-}
-
-/* =========
-   Base
-   ========= */
-html,
-body {
-  height: 100%;
-}
-
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial,
-    "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-}
-
-/* =========
-   Layout helpers used in pages
-   ========= */
-.container {
-  max-width: 980px;
+/* ===== shared UI ===== */
+.container{
+  max-width: 1040px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 28px 20px;
 }
 
-.card {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 18px;
-  box-shadow: var(--shadow);
+/* Header */
+.siteHeader{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in srgb, var(--panel) 92%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
 }
-
-.h1 {
-  font-size: 28px;
-  line-height: 1.2;
-  font-weight: 800;
-  margin: 0;
+.headerInner{
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 14px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
-
-.h2 {
-  font-size: 18px;
-  font-weight: 800;
-  margin: 0;
+.brandLink{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
 }
-
-.muted {
-  color: var(--muted);
-}
-
-.footer {
-  margin-top: 24px;
-  padding-top: 14px;
-  border-top: 1px solid var(--line);
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
+.headerNav{
+  display:flex;
+  gap: 14px;
   flex-wrap: wrap;
-  font-size: 13px;
-  color: var(--muted);
+  justify-content: flex-end;
 }
-
-/* =========
-   Links / Buttons (shared)
-   ========= */
-a {
-  color: inherit;
+.navLink{
+  color: var(--muted);
+  font-size: 14px;
+}
+.navLink:hover{
+  color: var(--text);
   text-decoration: none;
 }
-a:hover {
-  text-decoration: underline;
-}
 
-.btn {
-  display: inline-block;
-  padding: 10px 14px;
+/* Buttons */
+.btn{
+  display:inline-block;
+  padding:10px 14px;
   border-radius: 12px;
   border: 1px solid var(--line);
   background: var(--panel);
   color: var(--text);
-  text-decoration: none;
+  text-decoration:none;
 }
-.btn:hover {
-  text-decoration: none;
-  filter: brightness(0.99);
-}
-.btnPrimary {
-  border-color: color-mix(in srgb, var(--accent) 25%, var(--line));
-  background: color-mix(in srgb, var(--accent) 10%, var(--panel));
+.btn:hover{ text-decoration:none; filter: brightness(0.99); }
+.btnPrimary{
+  border-color: color-mix(in srgb, var(--accent) 30%, var(--line));
+  background: color-mix(in srgb, var(--accent) 12%, var(--panel));
   color: var(--accent2);
   font-weight: 700;
+}
+
+/* Sections */
+.section{ padding: 34px 0; }
+.sectionAlt{
+  background: color-mix(in srgb, var(--bg) 85%, #ffffff);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.card{
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 10px 26px rgba(16,24,16,0.06);
+}
+
+.h1{ font-size: 40px; line-height: 1.15; font-weight: 800; margin: 0; letter-spacing: .2px; }
+.h2{ font-size: 20px; font-weight: 800; margin: 0; }
+.muted{ color: var(--muted); }
+
+.heroWrap{
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(900px 380px at 20% 10%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 60%),
+    radial-gradient(900px 380px at 80% 30%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 60%),
+    var(--bg);
+}
+
+.grid3{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+@media (max-width: 900px){
+  .headerInner{ grid-template-columns: 1fr auto; }
+  .headerNav{ display:none; } /* スマホは隠してCTA優先（必要なら後でメニュー化） */
+  .grid3{ grid-template-columns: 1fr; }
 }

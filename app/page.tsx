@@ -2,231 +2,100 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="container">
-      <style>{`
-        .topbar{
-          display:flex;
-          justify-content: space-between;
-          align-items:center;
-          gap:12px;
-          margin-bottom: 14px;
-        }
-        .brand{
-          display:flex;
-          flex-direction:column;
-          gap:2px;
-        }
-        .brandName{ font-weight: 800; letter-spacing: .2px; }
-        .brandTag{ color: var(--muted); font-size: 13px; }
-        .nav{
-          display:flex;
-          gap:10px;
-          flex-wrap:wrap;
-        }
-        .nav a{
-          padding:8px 10px;
-          border:1px solid var(--line);
-          border-radius:999px;
-          background:#fafbf9;
-        }
-        .nav a:hover{ text-decoration:none; background:#f1f6f1; }
+    <>
+      {/* HERO */}
+      <section className="heroWrap">
+        <div className="container section">
+          <p className="muted" style={{ margin: 0, fontSize: 13, letterSpacing: 0.4 }}>
+            Satellite × UAV × AI
+          </p>
+          <h1 className="h1" style={{ marginTop: 10 }}>
+            草地診断を、<br />意思決定に使える情報へ。
+          </h1>
+          <p className="muted" style={{ marginTop: 12, fontSize: 16, lineHeight: 1.8, maxWidth: 780 }}>
+            衛星・ドローン・現地データを統合し、圃場単位で状態を可視化。
+            更新判断、管理優先度付け、収穫計画に繋がるアウトプット（地図・集計・重点対応エリア）を提供します。
+          </p>
 
-        .heroCard{
-          padding: 22px;
-        }
-        .hero{
-          display:grid;
-          grid-template-columns: 1.25fr 0.75fr;
-          gap: 18px;
-          align-items: start;
-        }
-        .headline{
-          font-size: 34px;
-          margin: 0;
-          letter-spacing: .2px;
-        }
-        .lead{
-          margin: 10px 0 0;
-          color: var(--muted);
-          font-size: 16px;
-        }
-        .chips{
-          display:flex;
-          flex-wrap:wrap;
-          gap:8px;
-          margin-top:14px;
-        }
-        .chip{
-          font-size:13px;
-          padding:6px 10px;
-          border:1px solid var(--line);
-          border-radius:999px;
-          background:#fafbf9;
-          color: var(--text);
-        }
-
-        .ctaRow{
-          display:flex;
-          flex-wrap:wrap;
-          gap:10px;
-          margin-top:16px;
-        }
-        .btn{
-          display:inline-block;
-          padding:10px 14px;
-          border-radius:12px;
-          border:1px solid var(--line);
-          background: var(--panel);
-          color: var(--text);
-          text-decoration:none;
-        }
-        .btnPrimary{
-          border-color: color-mix(in srgb, var(--accent) 25%, var(--line));
-          background: color-mix(in srgb, var(--accent) 10%, var(--panel));
-          color: var(--accent2);
-          font-weight: 700;
-        }
-        .btn:hover{ text-decoration:none; filter: brightness(0.99); }
-
-        .sidePanel{
-          border: 1px solid var(--line);
-          border-radius: 16px;
-          padding: 14px 14px 12px;
-          background: #fafbf9;
-        }
-        .sideTitle{
-          margin: 0 0 8px;
-          font-size: 14px;
-          letter-spacing: .2px;
-          color: var(--muted);
-          font-weight: 700;
-          text-transform: uppercase;
-        }
-        .list{
-          margin: 0;
-          padding-left: 18px;
-        }
-        .note{
-          margin-top: 10px;
-          color: var(--muted);
-          font-size: 13px;
-        }
-
-        .section{
-          margin-top: 22px;
-        }
-        .cards{
-          display:grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 14px;
-          margin-top: 14px;
-        }
-        .cardTitle{
-          margin: 0 0 8px;
-          font-size: 16px;
-        }
-        .cardBody{
-          margin: 0;
-          color: var(--muted);
-        }
-
-        @media (max-width: 900px){
-          .hero{ grid-template-columns: 1fr; }
-          .cards{ grid-template-columns: 1fr; }
-        }
-      `}</style>
-
-      {/* Top bar */}
-      <div className="topbar">
-        <div className="brand">
-          <div className="brandName">Pasture Japan</div>
-          <div className="brandTag">Satellite × UAV × AI for pasture diagnostics</div>
-        </div>
-        <nav className="nav" aria-label="primary">
-          <Link href="/company">Company</Link>
-          <Link href="/contact">Contact</Link>
-          <Link href="/privacy">Privacy</Link>
-        </nav>
-      </div>
-
-      {/* Hero */}
-      <section className="card heroCard">
-        <div className="hero">
-          <div>
-            <h1 className="headline">草地診断を、意思決定に使える情報へ。</h1>
-            <p className="lead">
-              衛星 × UAV（ドローン）× AIで、草地の状態を圃場単位に可視化。
-              更新判断・管理優先度付け・収穫計画を支える診断レポートを提供します。
-            </p>
-
-            <div className="chips" aria-label="keywords">
-              <span className="chip">Vegetation mapping</span>
-              <span className="chip">Legume rate</span>
-              <span className="chip">Weed / Bare ground</span>
-              <span className="chip">Remote sensing</span>
-              <span className="chip">AI / ML</span>
-            </div>
-
-            <div className="ctaRow">
-              <Link className="btn btnPrimary" href="/contact">相談する</Link>
-              <Link className="btn" href="/company">会社概要</Link>
-            </div>
-
-            <div className="note">
-              お問い合わせ：info@pasture.jp（返信にお時間をいただく場合があります）
-            </div>
+          <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 18 }}>
+            <Link className="btn btnPrimary" href="/contact">相談する</Link>
+            <Link className="btn" href="/company">会社概要</Link>
           </div>
 
-          <aside className="sidePanel">
-            <div className="sideTitle">Who we support</div>
-            <ul className="list">
-              <li>TMRセンター / コントラクター（広域収穫計画）</li>
-              <li>自治体・JA・普及組織（地域診断・施策設計）</li>
-              <li>巡回の省力化・判断の標準化を進めたい現場</li>
-            </ul>
-
-            <div className="sideTitle" style={{ marginTop: 14 }}>Deliverables</div>
-            <ul className="list">
-              <li>圃場別診断マップ（PDF/画像）</li>
-              <li>集計表（Excel/CSV）</li>
-              <li>重点対応エリアの抽出</li>
-            </ul>
-          </aside>
+          <p className="muted" style={{ marginTop: 14, marginBottom: 0, fontSize: 13 }}>
+            お問い合わせ：info@pasture.jp
+          </p>
         </div>
       </section>
 
-      {/* Value */}
-      <section className="section">
-        <h2 className="h2">What we deliver</h2>
-        <div className="cards">
-          <div className="card">
-            <h3 className="cardTitle">Vegetation diagnosis</h3>
-            <p className="cardBody">
-              草種・マメ科率・雑草優占・裸地/劣化兆候などを圃場単位で可視化し、対策の優先度付けを支援します。
-            </p>
-          </div>
-          <div className="card">
-            <h3 className="cardTitle">Area aggregation</h3>
-            <p className="cardBody">
-              地区・組織単位で分布や変化を集計し、意思決定に使える形（レポート/表）で提供します。
-            </p>
-          </div>
-          <div className="card">
-            <h3 className="cardTitle">Toward yield planning</h3>
-            <p className="cardBody">
-              植生判別を基盤に、草量推定・刈取り優先順位・適期判断へ段階的に拡張します。
-            </p>
+      {/* VALUE */}
+      <section>
+        <div className="container section">
+          <h2 className="h2">What we deliver</h2>
+          <p className="muted" style={{ marginTop: 10, marginBottom: 0, maxWidth: 820 }}>
+            現場で使える「判断材料」に落とし込むことを重視し、圃場〜地区レベルの可視化と集計を提供します。
+          </p>
+
+          <div className="grid3" style={{ marginTop: 16 }}>
+            <div className="card">
+              <h3 style={{ margin: 0, fontWeight: 800 }}>Vegetation diagnosis</h3>
+              <p className="muted" style={{ margin: "8px 0 0" }}>
+                草種・マメ科率・雑草優占・裸地/劣化兆候などを圃場単位で可視化。
+              </p>
+            </div>
+            <div className="card">
+              <h3 style={{ margin: 0, fontWeight: 800 }}>Area aggregation</h3>
+              <p className="muted" style={{ margin: "8px 0 0" }}>
+                地区・組織単位で分布や変化を集計し、重点対応エリアを抽出。
+              </p>
+            </div>
+            <div className="card">
+              <h3 style={{ margin: 0, fontWeight: 800 }}>Toward yield planning</h3>
+              <p className="muted" style={{ margin: "8px 0 0" }}>
+                植生判別を基盤に、草量推定・適期判断へ段階的に拡張。
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <footer className="footer">
-        <span>© {new Date().getFullYear()} Pasture Japan</span>
-        <span className="muted">
-          <Link href="/company">Company</Link> · <Link href="/contact">Contact</Link> ·{" "}
-          <Link href="/privacy">Privacy</Link>
-        </span>
+      {/* WHO */}
+      <section className="sectionAlt">
+        <div className="container section">
+          <h2 className="h2">Who we support</h2>
+          <div className="grid3" style={{ marginTop: 16 }}>
+            <div className="card">
+              <h3 style={{ margin: 0, fontWeight: 800 }}>TMR / Contractors</h3>
+              <p className="muted" style={{ margin: "8px 0 0" }}>
+                広域の収穫計画・作業優先順位の整理。
+              </p>
+            </div>
+            <div className="card">
+              <h3 style={{ margin: 0, fontWeight: 800 }}>JA / Extension</h3>
+              <p className="muted" style={{ margin: "8px 0 0" }}>
+                地域診断、支援施策の設計、説明資料の整備。
+              </p>
+            </div>
+            <div className="card">
+              <h3 style={{ margin: 0, fontWeight: 800 }}>Producers</h3>
+              <p className="muted" style={{ margin: "8px 0 0" }}>
+                巡回の省力化と、判断基準の標準化。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="container" style={{ paddingTop: 18, paddingBottom: 26 }}>
+        <div style={{ display: "flex", justifyContent: "space-between", gap: 12, flexWrap: "wrap" }}>
+          <span className="muted">© {new Date().getFullYear()} Pasture Japan</span>
+          <span className="muted">
+            <Link href="/company">Company</Link> · <Link href="/contact">Contact</Link> ·{" "}
+            <Link href="/privacy">Privacy</Link>
+          </span>
+        </div>
       </footer>
-    </main>
+    </>
   );
 }
