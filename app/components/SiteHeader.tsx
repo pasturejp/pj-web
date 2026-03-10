@@ -26,18 +26,21 @@ export default function SiteHeader() {
     <>
       <header className="siteHeader">
         <div className="container headerInner">
-          <Link href="/" className="brandLink" aria-label="Pasture Japan Home" onClick={() => setOpen(false)}>
-            <Image src="/logo-mark.png" alt="" width={36} height={36} priority />
-            <span className="brandFull">
-              <Image
-                src="/logo-full.png"
-                alt="Pasture Japan"
-                width={170}
-                height={36}
-                priority
-                style={{ height: "auto", width: "auto" }}
-              />
-            </span>
+          <Link
+            href="/"
+            className="brandLink"
+            aria-label="Pasture Japan Home"
+            onClick={() => setOpen(false)}
+          >
+            {/* ロゴは横長のみ（この画像にマークが含まれているため） */}
+            <Image
+              src="/logo-full.png"
+              alt="Pasture Japan"
+              width={190}
+              height={40}
+              priority
+              style={{ height: "auto", width: "auto" }}
+            />
           </Link>
 
           <nav className="headerNav" aria-label="Primary">
