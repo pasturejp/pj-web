@@ -12,7 +12,7 @@ export default function Home() {
           <h1 className="h1" style={{ marginTop: 10 }}>
             草地診断を、<br />意思決定に使える情報へ。
           </h1>
-          <p className="muted" style={{ marginTop: 12, fontSize: 16, lineHeight: 1.8, maxWidth: 780 }}>
+          <p className="muted" style={{ marginTop: 12, fontSize: 16, lineHeight: 1.8, maxWidth: 700 }}>
             衛星・ドローン・現地データを統合し、圃場単位で状態を可視化。
             更新判断、管理優先度付け、収穫計画に繋がるアウトプット（地図・集計・重点対応エリア）を提供します。
           </p>

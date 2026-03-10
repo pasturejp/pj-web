@@ -148,10 +148,22 @@ a:hover{ text-decoration: underline; }
 
 .heroWrap{
   border-bottom: 1px solid var(--line);
+
+  /* 背景：写真 + うっすらグリーンのフィルター（可読性） */
   background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--bg) 92%, transparent) 0%,
+      color-mix(in srgb, var(--bg) 78%, transparent) 55%,
+      color-mix(in srgb, var(--bg) 35%, transparent) 100%
+    ),
     radial-gradient(900px 380px at 20% 10%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 60%),
     radial-gradient(900px 380px at 80% 30%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 60%),
-    var(--bg);
+    url("/hero/top002.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .grid3{
