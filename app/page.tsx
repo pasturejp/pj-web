@@ -38,19 +38,19 @@ export default function Home() {
 
           <div className="grid3" style={{ marginTop: 16 }}>
             <div className="card">
-              <h3 style={{ margin: 0, fontWeight: 800 }}>Vegetation diagnosis</h3>
+              <h3 style={{ margin: 0, fontWeight: 800 }}>植生診断</h3>
               <p className="muted" style={{ margin: "8px 0 0" }}>
                 草種・マメ科率・雑草優占・裸地/劣化兆候などを圃場単位で可視化。
               </p>
             </div>
             <div className="card">
-              <h3 style={{ margin: 0, fontWeight: 800 }}>Area aggregation</h3>
+              <h3 style={{ margin: 0, fontWeight: 800 }}>地区・組織・圃場単位の集計</h3>
               <p className="muted" style={{ margin: "8px 0 0" }}>
-                地区・組織単位で分布や変化を集計し、重点対応エリアを抽出。
+                地区・組織・圃場単位で分布や変化を集計し、重点対応エリアを抽出。
               </p>
             </div>
             <div className="card">
-              <h3 style={{ margin: 0, fontWeight: 800 }}>Toward yield planning</h3>
+              <h3 style={{ margin: 0, fontWeight: 800 }}>収穫計画への拡張</h3>
               <p className="muted" style={{ margin: "8px 0 0" }}>
                 植生判別を基盤に、草量推定・適期判断へ段階的に拡張。
               </p>
@@ -65,19 +65,19 @@ export default function Home() {
           <h2 className="h2">想定する利用者</h2>
           <div className="grid3" style={{ marginTop: 16 }}>
             <div className="card">
-              <h3 style={{ margin: 0, fontWeight: 800 }}>TMR / Contractors</h3>
+              <h3 style={{ margin: 0, fontWeight: 800 }}>TMRセンター / コントラクター</h3>
               <p className="muted" style={{ margin: "8px 0 0" }}>
                 広域の収穫計画・作業優先順位の整理。
               </p>
             </div>
             <div className="card">
-              <h3 style={{ margin: 0, fontWeight: 800 }}>JA / Extension</h3>
+              <h3 style={{ margin: 0, fontWeight: 800 }}>JA / 普及・自治体</h3>
               <p className="muted" style={{ margin: "8px 0 0" }}>
                 地域診断、支援施策の設計、説明資料の整備。
               </p>
             </div>
             <div className="card">
-              <h3 style={{ margin: 0, fontWeight: 800 }}>Producers</h3>
+              <h3 style={{ margin: 0, fontWeight: 800 }}>生産者</h3>
               <p className="muted" style={{ margin: "8px 0 0" }}>
                 巡回の省力化と、判断基準の標準化。
               </p>
