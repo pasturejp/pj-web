@@ -85,7 +85,7 @@ export default function CompanyPage() {
         <section className="card" style={{ marginBottom: 14 }}>
           <h2 className="h2">チーム</h2>
           <p className="muted" style={{ marginTop: 10, marginBottom: 0 }}>
-            写真をクリックすると拡大表示できます。担当領域・リンクは今後追記できます。
+            写真をクリックすると拡大表示できます。
           </p>
           <TeamList />
         </section>
