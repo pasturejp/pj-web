@@ -4,7 +4,7 @@ import TeamList from "../components/TeamList";
 export default function CompanyPage() {
   return (
     <>
-      {/* HERO（背景画像は .heroWrap で出る） */}
+      {/* HERO */}
       <section className="heroWrap">
         <div className="container section">
           <p className="muted" style={{ margin: 0, fontSize: 13, letterSpacing: 0.4 }}>
@@ -33,46 +33,67 @@ export default function CompanyPage() {
         </div>
       </section>
 
-      {/* CONTENT */}
       <main className="container">
-        {/* 会社概要（最小セット） */}
+        {/* 会社概要 */}
         <section className="card" style={{ marginTop: 18, marginBottom: 14 }}>
           <h2 className="h2">会社概要</h2>
 
           <div className="grid3" style={{ marginTop: 14 }}>
             <div className="card" style={{ boxShadow: "none" }}>
-              <h3 style={{ margin: 0, fontWeight: 800 }}>事業内容</h3>
+              <h3 style={{ margin: 0, fontWeight: 800 }}>会社名</h3>
+              <p className="muted" style={{ margin: "8px 0 0" }}>株式会社Pasture Japan</p>
+            </div>
+
+            <div className="card" style={{ boxShadow: "none" }}>
+              <h3 style={{ margin: 0, fontWeight: 800 }}>所在地</h3>
               <p className="muted" style={{ margin: "8px 0 0" }}>
-                草地診断（植生可視化・集計・重点対応エリア抽出）および関連する技術開発・運用支援。
+                北海道帯広市西11条34丁目
               </p>
             </div>
 
             <div className="card" style={{ boxShadow: "none" }}>
-              <h3 style={{ margin: 0, fontWeight: 800 }}>提供形態</h3>
+              <h3 style={{ margin: 0, fontWeight: 800 }}>設立</h3>
               <p className="muted" style={{ margin: "8px 0 0" }}>
-                受託（解析・レポート）を起点に、将来的にダッシュボード/システム提供へ段階的に拡張します。
-              </p>
-            </div>
-
-            <div className="card" style={{ boxShadow: "none" }}>
-              <h3 style={{ margin: 0, fontWeight: 800 }}>対象</h3>
-              <p className="muted" style={{ margin: "8px 0 0" }}>
-                TMRセンター/コントラクター、JA/普及・自治体、生産者など。
+                2026年3月（予定）
               </p>
             </div>
           </div>
 
-          {/* ここは“準備中”でOK。後から埋める */}
           <div className="card" style={{ boxShadow: "none", marginTop: 14 }}>
-            <h3 style={{ margin: 0, fontWeight: 800 }}>基本情報（準備中）</h3>
+            <h3 style={{ margin: 0, fontWeight: 800 }}>連絡先</h3>
             <p className="muted" style={{ margin: "8px 0 0", lineHeight: 1.7 }}>
-              会社名／所在地／設立／資本金 等は、整備次第追記します。
-              お問い合わせは <Link href="/contact">Contact</Link> をご利用ください。
+              お問い合わせは <Link href="/contact">Contact</Link> のフォームからお願いします。
             </p>
           </div>
         </section>
 
-        {/* ミッション（短く） */}
+        {/* 事業内容 */}
+        <section className="card" style={{ marginBottom: 14 }}>
+          <h2 className="h2">事業内容</h2>
+
+          <div className="grid3" style={{ marginTop: 14 }}>
+            <div className="card" style={{ boxShadow: "none" }}>
+              <h3 style={{ margin: 0, fontWeight: 800 }}>草地診断</h3>
+              <p className="muted" style={{ margin: "8px 0 0" }}>
+                植生の可視化・集計・重点対応エリア抽出など、意思決定に使えるアウトプットを提供します。
+              </p>
+            </div>
+            <div className="card" style={{ boxShadow: "none" }}>
+              <h3 style={{ margin: 0, fontWeight: 800 }}>技術開発</h3>
+              <p className="muted" style={{ margin: "8px 0 0" }}>
+                衛星×UAV×AIの解析手法・処理パイプライン・指標化の開発と改善を行います。
+              </p>
+            </div>
+            <div className="card" style={{ boxShadow: "none" }}>
+              <h3 style={{ margin: 0, fontWeight: 800 }}>運用支援</h3>
+              <p className="muted" style={{ margin: "8px 0 0" }}>
+                現地条件に合わせた観測・解析・レポート設計を行い、導入後の運用も支援します。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ミッション */}
         <section className="card" style={{ marginBottom: 14 }}>
           <h2 className="h2">ミッション</h2>
           <p className="muted" style={{ marginTop: 10, marginBottom: 0, lineHeight: 1.8 }}>
@@ -81,20 +102,20 @@ export default function CompanyPage() {
           </p>
         </section>
 
-        {/* Team */}
+        {/* チーム */}
         <section className="card" style={{ marginBottom: 14 }}>
           <h2 className="h2">チーム</h2>
           <p className="muted" style={{ marginTop: 10, marginBottom: 0 }}>
-            写真をクリックすると拡大表示できます。
+            写真をクリックすると拡大表示できます。担当領域・リンクは随時更新します。
           </p>
           <TeamList />
         </section>
 
-        {/* Contact */}
+        {/* 問い合わせ */}
         <section className="card">
           <h2 className="h2">お問い合わせ</h2>
           <p style={{ marginTop: 10, marginBottom: 0 }}>
-            ご相談は <Link href="/contact">Contact</Link> からフォームでお送りください。
+            ご相談は <Link href="/contact">Contact</Link> のフォームからお送りください。
           </p>
         </section>
       </main>
