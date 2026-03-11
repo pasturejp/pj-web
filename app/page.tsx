@@ -31,7 +31,7 @@ export default function Home() {
       {/* VALUE */}
       <section>
         <div className="container section">
-          <h2 className="h2">What we deliver</h2>
+          <h2 className="h2">サービス</h2>
           <p className="muted" style={{ marginTop: 10, marginBottom: 0, maxWidth: 820 }}>
             現場で使える「判断材料」に落とし込むことを重視し、圃場〜地区レベルの可視化と集計を提供します。
           </p>
@@ -62,7 +62,7 @@ export default function Home() {
       {/* WHO */}
       <section className="sectionAlt">
         <div className="container section">
-          <h2 className="h2">Who we support</h2>
+          <h2 className="h2">想定する利用者</h2>
           <div className="grid3" style={{ marginTop: 16 }}>
             <div className="card">
               <h3 style={{ margin: 0, fontWeight: 800 }}>TMR / Contractors</h3>
